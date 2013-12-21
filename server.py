@@ -1,6 +1,3 @@
-import signal
-import sys
-
 from bottle import route
 from bottle import run
 from bottle import static_file
@@ -80,7 +77,6 @@ def setup():
   
 def exit():
   UnexportPin(25)
-  sys.exit(0)
 
 try:
   setup()
