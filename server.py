@@ -37,7 +37,7 @@ def SetPinOff(pin=None):
 def setup():
   for pin in _ACTIVE_PINS:
     gpio.ExportPin(pin)
-  gpio.SetDirection(25, gpio.DIRECTION_OUT)
+    gpio.SetDirection(pin, gpio.DIRECTION_OUT)
   
 def exit():
   for pin in _ACTIVE_PINS:
