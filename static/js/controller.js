@@ -1,5 +1,3 @@
-
-
 function PinCtrl($http) {
   this.http_ = $http;
   this.pins = {25: null};
@@ -46,6 +44,4 @@ PinCtrl.prototype.turnPinOff = function(pin) {
       alert('an error occurred turning the pin off...');
     });
 };
-
-
 
