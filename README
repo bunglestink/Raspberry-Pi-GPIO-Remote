@@ -1,0 +1,4 @@
+This is a simple web interface to control a Raspberry Pi GPIO pin over the web.
+
+Angular is used on the client, bottle is used for the http server.
+
