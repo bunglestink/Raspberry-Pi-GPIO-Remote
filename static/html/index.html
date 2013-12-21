@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>Test</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <script src="/static/js/controller.js"></script>
+  </head>
+  <body>
+    <h4>Raspberry PI GPIO Remote</h4>
+    <div ng-controller="PinCtrl as Pins"
+         ng-init="Pins.init()">
+      <div ng-repeat="(pin, value) in Pins.pins">
+        <div ng-show="value">
+          Pin {{pin}} is ON:
+          <button type="button" ng-click="Pins.turnPinOff(pin)">
+            Turn Off
+          </button>
+        </div>
+        <div ng-hide="value">
+          Pin {{pin}} is OFF:
+          <button type="button" ng-click="Pins.turnPinOn(pin)">
+            Turn On
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
