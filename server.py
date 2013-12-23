@@ -4,7 +4,8 @@ from bottle import route
 from bottle import run
 from bottle import static_file
 
-_HOSTNAME = '192.168.1.177'
+# Configure to listen on any hostname, port 80.
+_HOSTNAME = '0.0.0.0'
 _PORT = 80
 _ACTIVE_PINS = [25]
 
